@@ -68,8 +68,8 @@ with open(file_to_output, "w") as txt_file:
             if voteperc[n] > voteperc[n-1]:
                 winner = candidates[n]
         # Print and save each candidate's vote count and percentage
-        print(f"{candidates[n]}: {round(voteperc[n],2)} ({votes[n]})")
-        print(f"{candidates[n]}: {round(voteperc[n],2)} ({votes[n]})", file = txt_file)
+        print(f"{candidates[n]}: {round(voteperc[n],2)} % ({votes[n]})")
+        print(f"{candidates[n]}: {round(voteperc[n],2)} % ({votes[n]})", file = txt_file)
         n += 1
 
     # Generate and print the winning candidate summary
