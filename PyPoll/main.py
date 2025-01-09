@@ -13,7 +13,7 @@ candidate = ""
 candidates = []
 votes = [0,0,0]
 voteperc = []
-n = 0
+n = 0 #iterator for later
 # Winning Candidate and Winning Count Tracker
 winner = ""
 maxvotes = 0
@@ -43,7 +43,7 @@ with open(file_to_load) as election_data:
             candidates.append(candidate)
 
         # Add a vote to the candidate's count
-        for i in range(len(candidates)):
+        for i in range(len(candidates)):     # adds votes for each candidate, only iterates as many times as there are candidates, ensures candidates get their own votes
             if candidate == candidates[i]:
                 votes[i] += 1
     print("\n")
@@ -51,7 +51,7 @@ with open(file_to_load) as election_data:
 with open(file_to_output, "w") as txt_file:
     print("Election Results")
     print("-------------------------")
-    print("Election Results", file = txt_file)
+    print("Election Results", file = txt_file)                       # all here print to terminal and then output file
     print("-------------------------", file = txt_file)
     # Print the total vote count (to terminal)
     print(f"Total Votes: {total_votes}")
